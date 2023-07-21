@@ -31,7 +31,7 @@ header {
       .nav-link i,
       .nav-close,
       .nav-toggle {
-        display: none;
+        display: none !important;
       }
     }
     .nav-logo {

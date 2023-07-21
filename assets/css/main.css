@@ -285,7 +285,7 @@ header .nav .nav-toggle {
   header .nav .nav-link i,
   header .nav .nav-close,
   header .nav .nav-toggle {
-    display: none;
+    display: none !important;
   }
 }
 header .nav .nav-logo {
