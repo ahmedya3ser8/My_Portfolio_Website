@@ -1,0 +1,107 @@
+.skills {
+  .skills-container {
+    row-gap: 3.5rem;
+    @media screen and (min-width: 576px) {
+      &{
+        justify-content: center;
+      }
+    }
+    @media screen and (min-width: 767px) {
+      & {
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 5rem;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      & {
+        column-gap: 10rem;
+      }
+    }
+    .skills-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 0.5rem;
+      font-size: var(--small-font-size);
+      font-weight: var(--font-semi-bold);
+      margin-bottom: 2.5rem;
+      @media screen and (min-width: 1200px) {
+        & {
+          margin-bottom: 3rem;
+        }
+      }
+      i {
+        font-size: 1rem;
+        @media screen and (min-width: 1200px) {
+          & {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+    .skills-info,
+    .skills-data,
+    .skills-image {
+      display: grid;
+    }
+    .skills-info {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 2rem;
+      @media screen and (max-width: 340px) {
+        & {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        & {
+          gap: 3rem;
+        }
+      }
+    }
+    .skills-data {
+      text-align: center;
+      justify-content: center;
+      .skills-image {
+        width: 80px;
+        height: 100px;
+        background-color: var(--container-color);
+        border-radius: 3rem;
+        place-items: center;
+        margin-bottom: 1rem;
+        transition: backgroundcolor 0.4s;
+        &:hover {
+          animation: bounce-skills 0.6s;
+        }
+        @keyframes bounce-skills {
+          0%,
+          40%,
+          80% {
+            transform: translate(0);
+          }
+          20% {
+            transform: translateY(-6px);
+          }
+          60% {
+            transform: translateY(-3px);
+          }
+        }
+        img {
+          width: 40px;
+        }
+      }
+      .skills-name {
+        margin-bottom: 0.25rem;
+        font-size: var(--small-font-size);
+        @media screen and (min-width: 1200px) {
+          & {
+            font-size: var(--normal-font-size);
+          }
+        }
+      }
+      .skills-subtitle {
+        font-size: var(--tiny-font-size);
+        color: var(--text-color-light);
+      }
+    }
+  }
+}

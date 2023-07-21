@@ -1,0 +1,96 @@
+:root {
+  /*========== Colors ==========*/
+  --first-color: #6cace0;
+  --title-color: #27292a;
+  --text-color: #45484a;
+  --text-color-light: #8a8f93;
+  --body-color: #fcfcfd;
+  --container-color: #f2f2f3;
+   /* Change the first number */
+  --gradient-color: linear-gradient(180deg,rgba(149, 187, 218, 0%),#6cace0);
+  --box-shadow: 0 4px 20px rgba(68, 91, 111, 10%);
+  /*========== Font and typography ==========*/
+  --body-font: 'Roboto', sans-serif;
+  --title-font: 'Lora', serif;
+  --biggest-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== z index ==========*/
+  --z-normal: 1;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    --tiny-font-size: .688rem;
+  }
+}
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --title-color: #f2f2f3;
+  --text-color: #a2a6a9;
+  --body-color: #181a1b;
+  --container-color: #1d1f20;
+}
+
+@media screen and (min-width: 1023px) {
+  .dark-theme .nav,
+  .dark-theme .nav-menu {
+    background-color: var(--body-color);
+    box-shadow: none;
+  }
+}
+
+.dark-theme .nav,
+.dark-theme .nav-menu,
+.dark-theme .scroll-to-top {
+  background-color: var(--container-color);
+  box-shadow: 0 4px 20px #10151966;
+}
+
+.dark-theme .scroll-to-top .up {
+  background: linear-gradient(to right, #fff 50%, #fff 50%);
+}
+
+.dark-theme .home-shape-waves,
+.dark-theme .home-shape-circle,
+.dark-theme .qualification-image,
+.dark-theme .testimonial-img{
+  filter: invert(1);
+}
+
+.dark-theme .home-social-link {
+  color: var(--title-color);
+}
+
+.dark-theme .section-border {
+  border-bottom: 1px solid #4e5255;
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(207, 4%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 35%);
+}
