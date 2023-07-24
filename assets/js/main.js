@@ -1,4 +1,4 @@
-/*=============== SHOW MENU ===============*/
+// SHOW MENU
 const navMenu = document.getElementById("nav-menu"),
       navToggle = document.getElementById("nav-toggle"),
       navClose = document.getElementById("nav-close")
@@ -14,7 +14,8 @@ if (navClose) {
     navMenu.classList.remove("show-menu");
   });
 }
-/*=============== REMOVE MENU MOBILE ===============*/
+
+// REMOVE MENU MOBILE
 const navLink = document.querySelectorAll("header .nav-link");
 const linkActive = () => {
   let navMenu = document.getElementById("nav-menu");
@@ -22,7 +23,7 @@ const linkActive = () => {
 }
 navLink.forEach(n => n.addEventListener("click", linkActive));
 
-/*=============== SWIPER PROJECTS ===============*/
+// SWIPER PROJECTS
 const swiperProjects = new Swiper('.projects-container', {
   // Optional parameters
   loop: true,
@@ -54,9 +55,6 @@ const swiperTestimonial = new Swiper('.testimonial-container', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-/*=============== EMAIL JS ===============*/
-
 
 // Scroll With Active Link
 let sections = document.querySelectorAll(".home, .skills, .qualification, .services, .projects, .contact");
@@ -95,15 +93,44 @@ btn.onclick = function() {
   });
 };
 
-/*=============== DARK LIGHT THEME ===============*/ 
-let changeTheme = document.querySelector(".change-theme");
-// console.log(changeTheme);
-changeTheme.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
+// DARK LIGHT THEME
+let ThemeButton = document.querySelector(".change-theme");
+let darkTheme = 'dark-theme';
+
+const selectedTheme = localStorage.getItem('selected-theme');
+
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+}
+
+ThemeButton.addEventListener("click", () => {
+  document.body.classList.toggle(darkTheme);
+  // Save the theme and icon in localStorage
+  localStorage.setItem('selected-theme', getCurrentTheme());
 });
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
+// CHANGE BACKGROUND HEADER
+let header = document.querySelector("header");
+document.addEventListener("scroll", () => {
+  if (window.scrollY >= 250) {
+    header.classList.add("bg-header");
+  } else {
+    header.classList.remove("bg-header");
+  }
+});
 
+// SCROLL REVEAL ANIMATION
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+});
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
-
+sr.reveal('.home-data, .projects-container, .testimonial-container, .footer-container')
+sr.reveal('.home-info div', {delay: 600, origin: 'bottom', interval: 100})
+sr.reveal('.skills-content:nth-child(1), .contact-content:nth-child(1)', {origin: 'left'})
+sr.reveal('.skills-content:nth-child(2), .contact-content:nth-child(2)', {origin: 'right'})
+sr.reveal('.qualification-content, .services-card', {interval: 100})

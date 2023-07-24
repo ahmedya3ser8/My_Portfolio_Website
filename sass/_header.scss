@@ -19,7 +19,7 @@ header {
     align-items: center;
     background-color: var(--body-color);
     box-shadow: var(--box-shadow);
-    padding-inline: 1.5rem;
+    padding-inline: 1.5rem !important;
     border-radius: 3rem;
     transition: backgroundcolor 0.4s;
     .nav-logo,
@@ -60,7 +60,7 @@ header {
     }
     @media screen and (min-width: 576px) {
       &{
-        margin: 0 auto;
+        margin: 0 auto !important;
       }
     }
     @media screen and (min-width: 576px) {
@@ -77,6 +77,7 @@ header {
         box-shadow: none;
         column-gap: 3rem;
         padding: 0;
+        margin-inline: 1.5rem;
       }
     }
     @media screen and (min-width: 1023px) {

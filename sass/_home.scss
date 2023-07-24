@@ -47,7 +47,7 @@
       @media screen and (min-width: 1200px) {
         & {
           width: 400px;
-          height: 500px;
+          height: 580px;
           border-radius: 12.5rem;
         }
       }
@@ -178,4 +178,12 @@
       font-weight: var(--font-semi-bold);
     }
   }
+}
+
+.bg-header {
+  box-shadow: 0 4px 20px hsl(207, 24%, 35%, 0.1);
+}
+
+.dark-theme .bg-header {
+  box-shadow: 0 6px 24px hsl(207, 24%, 8%, 0.6);
 }
