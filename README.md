@@ -1,5 +1,5 @@
 # My_Portfolio_Website
-My_Portfolio_Website
+<h2>Responsive Personal Portfolio Website</h2>
 <li> Responsive Personal Portfolio Website Design Using HTML & CSS & Sass & JavaScript </li>
 <li> Includes a light and dark theme.</li>
 <li> Contains animations when scrolling.</li>
